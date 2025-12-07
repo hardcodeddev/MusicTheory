@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dubstep Theory Quest</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">From zero to drops</p>
+      <h1>Dubstep Theory Quest</h1>
+      <p>Level up from music theory basics to complex wobble-ready chord progressions through bite-sized quests, quizzes, and ear-training challenges.</p>
+      <div class="hero__actions">
+        <button class="button" id="start-journey">Start Your Journey</button>
+        <button class="button button--secondary" id="continue-journey">Continue</button>
+      </div>
+    </div>
+    <div class="hero__panel">
+      <p class="panel__label">Current Mission</p>
+      <div class="panel__content">
+        <div id="mission-title" class="panel__title">Select a level to begin</div>
+        <div id="mission-detail" class="panel__detail">Progress and XP are saved locally.</div>
+      </div>
+      <div class="progress">
+        <div id="xp-bar" class="progress__bar"></div>
+      </div>
+      <p class="progress__label"><span id="xp-points">0</span> XP</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <header class="card__header">
+        <div>
+          <p class="eyebrow">Progression</p>
+          <h2>Core Levels</h2>
+        </div>
+        <button class="button button--ghost" id="reset-progress">Reset progress</button>
+      </header>
+      <div id="level-grid" class="grid"></div>
+    </section>
+
+    <section class="card card--split">
+      <div>
+        <header class="card__header">
+          <div>
+            <p class="eyebrow">Dubstep toolkit</p>
+            <h2>Chord Builder</h2>
+          </div>
+        </header>
+        <div class="control-row">
+          <label for="key-select">Key</label>
+          <select id="key-select"></select>
+        </div>
+        <div class="control-row">
+          <label for="chord-select">Chord type</label>
+          <select id="chord-select"></select>
+        </div>
+        <button class="button" id="play-chord">Play chord</button>
+        <p class="small">Use the chord builder to explore the vibes behind dubstep drops. Popular picks: minor 7ths, suspended chords, and modal interchange.</p>
+        <div id="chord-notes" class="chip-row"></div>
+      </div>
+      <div>
+        <header class="card__header">
+          <div>
+            <p class="eyebrow">Practice loop</p>
+            <h2>Ear Training Quiz</h2>
+          </div>
+          <button class="button button--ghost" id="new-quiz">New quiz</button>
+        </header>
+        <div id="quiz-prompt" class="quiz__prompt">Press play to start a new quiz question.</div>
+        <div class="quiz__actions">
+          <button class="button" id="play-quiz">Play question</button>
+          <button class="button button--secondary" id="reveal-answer">Reveal answer</button>
+        </div>
+        <div id="quiz-choices" class="chip-row"></div>
+        <p id="quiz-feedback" class="quiz__feedback"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <header class="card__header">
+        <div>
+          <p class="eyebrow">Dubstep playbook</p>
+          <h2>Cheat Codes</h2>
+        </div>
+      </header>
+      <div class="cheats">
+        <div class="cheat">
+          <h3>Rhythm</h3>
+          <ul>
+            <li>Think in half-time: snares on beat 3, leaving space for bass.</li>
+            <li>Use triplets and swung sixteenths to create movement.</li>
+            <li>Layer percussion with subtle low-pass filters to keep it dark.</li>
+          </ul>
+        </div>
+        <div class="cheat">
+          <h3>Harmony</h3>
+          <ul>
+            <li>Minor keys and modal interchange (♭VII, iv, ♭VI) create grit.</li>
+            <li>Use suspended chords before drops for tension.</li>
+            <li>Try chromatic mediants for surprising lifts.</li>
+          </ul>
+        </div>
+        <div class="cheat">
+          <h3>Sound design</h3>
+          <ul>
+            <li>Automate filter cutoff with LFOs synced to dotted 8ths.</li>
+            <li>Layer FM bass with sub sine to keep the low-end solid.</li>
+            <li>Use pitch envelopes for growls and vocal-like articulations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Built for fast theory leveling. Progress saves in your browser.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
